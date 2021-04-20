@@ -50,8 +50,11 @@ background(47,80,139)
     fill(255,255,254)
     textSize(15)
     if(lastFed>=12){
-
-      text("Last Fed" +lastFed%12 + "PM", 350,30)
+      text("Last Feed" +lastFed%12 + "PM", 350,30)
+    }else if (lastFed == 0){
+      text("Last feed: 12 AM" ,350,30)
+    }else{
+      text("Last feed:" +lastFed+ "AM", 350,30)
     }
  
   
@@ -76,9 +79,9 @@ function readStock(data){
 function feedDog(){
   dog.addImage(dogH)
 
-  foodObj.updateFoodStock(foodObj.getFoodStock()-1);
+  food.updateFoodStock(food.getFoodStock()-1);
   database.ref('/').update({
-    food:foodObj.getFoodStock(),
+    food:food.getFoodStock(),
     fedTime:hour()
   })
 
