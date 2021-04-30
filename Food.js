@@ -27,13 +27,10 @@ class Food{
          }
       }
 
-
+   updateFoodStock(foodStock){
+       this.foodStock=foodStock;
+       }
     }
 
-    updateFoodStock( ){
-      database.ref('/').update({
-        food:food.getFoodStock(),
-        fedTime:hour()
-      })
-    }
+     
 }
