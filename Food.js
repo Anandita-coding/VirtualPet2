@@ -27,10 +27,11 @@ class Food{
          }
       }
 
-   updateFoodStock(foodStock){
-       this.foodStock=foodStock;
-       }
+
     }
 
-     
+   
+    updateFoodStock(foodStock){
+       this.foodStock=foodStock;
+       }
 }
